@@ -93,3 +93,8 @@ npm run dev
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+
+El sitio web estará disponible en http://localhost:4321.
+
+Praise the Sun! ☀️
