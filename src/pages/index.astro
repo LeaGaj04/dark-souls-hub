@@ -28,10 +28,55 @@
       </div>
     </section>
 
+	<footer class="footer-section">
+      <div class="footer-content">
+        <h3 class="footer-title">Forja tu propio destino</h3>
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
 
 <style>
+	/* --- ESTILOS DEL FOOTER --- */
+  .footer-section {
+    background-color: rgb(8, 8, 10); /* Un abismo aún más oscuro que el fondo principal */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid var(--color-sun-glow); /* Una línea dorada sutil que marca el final de la página */
+  }
+
+  .footer-title {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Flexbox puro: crea un espaciado exacto de 30px entre cada enlace sin usar márgenes manuales */
+  }
+
+  .social-link {
+    color: var(--color-sun-gold);
+    text-decoration: none; /* Quita el subrayado azul feo que traen los enlaces por defecto */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: #ffffff; /* Al pasar el mouse, la luz se intensifica a blanco puro */
+    text-shadow: 0 0 15px var(--color-sun-gold);
+  }
+  
   :root {
     --color-bg-dark: rgb(15, 15, 18);
     --color-sun-gold: #FDB813;
