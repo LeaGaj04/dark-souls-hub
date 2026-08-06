@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="480" height="268" alt="image" src="https://github.com/user-attachments/assets/574b156d-35fd-4b6b-b2cd-defdc21b4f4c" alt="Solaire of Astora Web Preview" width="100%">
+</p>
+
 # ☀️ Solaire of Astora | Frontend Web
 
 > *"El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!"* — Solaire de Astora
