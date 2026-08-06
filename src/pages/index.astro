@@ -28,6 +28,28 @@
       </div>
     </section>
 
+	<section id="reliquias" class="reliquias-section">
+      <h2 class="reliquias-title">Reliquias de Astora</h2>
+      <p class="reliquias-subtitle">El equipo forjado en la luz para combatir el Abismo.</p>
+      
+      <div class="grid-container">
+        <article class="card">
+          <h3 class="card-title">Espada Recta de Luz Solar</h3>
+          <p class="card-text">Un arma ordinaria, pero imbuida con una fe inquebrantable y un diseño incandescente.</p>
+        </article>
+        
+        <article class="card">
+          <h3 class="card-title">Escudo de Luz Solar</h3>
+          <p class="card-text">Decorado con el símbolo sagrado, un faro de esperanza para los aliados en batalla.</p>
+        </article>
+        
+        <article class="card">
+          <h3 class="card-title">Talismán de Luz de Sol</h3>
+          <p class="card-text">Catalizador de milagros divinos, entregado solo a los guerreros más devotos del pacto.</p>
+        </article>
+      </div>
+    </section>
+
 	<footer class="footer-section">
       <div class="footer-content">
         <h3 class="footer-title">Forja tu propio destino</h3>
@@ -42,6 +64,67 @@
 </html>
 
 <style>
+
+/* --- ESTILOS DE LA SECCIÓN RELIQUIAS (CSS GRID) --- */
+  .reliquias-section {
+    padding: 100px 20px;
+    background-color: var(--color-bg-dark);
+    text-align: center;
+  }
+
+  .reliquias-title {
+    color: var(--color-sun-gold);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .reliquias-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-text-light);
+  }
+
+  /* LA MAGIA DEL GRID */
+  .grid-container {
+    display: grid;
+    /* Esto hace que las cartas se acomoden solas dependiendo del tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+  }
+
+  /* ESTILOS DE LAS CARTAS (UI) */
+  .card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(253, 184, 19, 0.2); /* Borde dorado muy tenue */
+    border-radius: 8px;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+  }
+
+  .card-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    line-height: 1.6;
+    color: hsl(0, 0%, 75%);
+  }
+
+  /* EFECTO HOVER EN LAS CARTAS */
+  .card:hover {
+    background-color: rgba(253, 184, 19, 0.1); /* Fondo se tiñe ligeramente de dorado */
+    border-color: var(--color-sun-gold);
+    /* translateY levanta la carta hacia arriba creando un efecto 3D */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
 	/* --- ESTILOS DEL FOOTER --- */
   .footer-section {
     background-color: rgb(8, 8, 10); /* Un abismo aún más oscuro que el fondo principal */
@@ -76,7 +159,7 @@
     color: #ffffff; /* Al pasar el mouse, la luz se intensifica a blanco puro */
     text-shadow: 0 0 15px var(--color-sun-gold);
   }
-  
+
   :root {
     --color-bg-dark: rgb(15, 15, 18);
     --color-sun-gold: #FDB813;
