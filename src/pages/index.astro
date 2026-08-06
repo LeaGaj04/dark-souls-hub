@@ -3,121 +3,147 @@
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Solaire of Astora | Praise the Sun</title>
-	</head>
-	<body>
-		<main class="hero-section">
-			<video class="bg-video" autoplay loop muted playsinline>
-				<source src="/hoguera.mp4" type="video/mp4" />
-			</video>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solaire of Astora | Praise the Sun</title>
+  </head>
+  <body>
+    <main class="hero-section">
+      <video class="bg-video" autoplay loop muted playsinline>
+        <source src="/hoguera.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Solaire de Astora</h1>
+        <p class="hero-subtitle">El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!</p>
+        <a href="#pacto" class="cta-button">Únete al Pacto</a>
+      </div>
+    </main>
 
-			<div class="video-overlay"></div>
+    <section id="pacto" class="pacto-section">
+      <div class="pacto-content hidden-scroll"> 
+        <h2 class="pacto-title">El Pacto de la Luz Solar</h2>
+        <p class="pacto-text">Solo aquellos con el valor de enfrentar la oscuridad pueden unirse a nuestras filas. Comparte tu incandescencia con los mundos conectados.</p>
+      </div>
+    </section>
 
-			<div class="hero-content">
-				<h1 class="hero-title">Solaire de Astora</h1>
-				<p class="hero-subtitle">
-					El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan
-					incandescente!
-				</p>
-				<a href="#pacto" class="cta-button">Únete al Pacto</a>
-			</div>
-		</main>
-	</body>
+  </body>
 </html>
 
 <style>
-	:root {
-		--color-bg-dark: rgb(15, 15, 18);
-		--color-sun-gold: #fdb813;
-		--color-text-light: hsl(0, 0%, 85%);
-		--color-sun-glow: rgba(253, 184, 19, 0.4);
-	}
+  :root {
+    --color-bg-dark: rgb(15, 15, 18);
+    --color-sun-gold: #FDB813;
+    --color-text-light: hsl(0, 0%, 85%);
+    --color-sun-glow: rgba(253, 184, 19, 0.4); 
+  }
 
-	body {
-		margin: 0;
-		padding: 0;
-		background-color: var(--color-bg-dark);
-		color: var(--color-text-light);
-		font-family:
-			system-ui,
-			-apple-system,
-			sans-serif;
-		overflow-x: hidden;
-	}
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden; 
+  }
+  
+  /* --- ESTILOS HERO (Sin cambios) --- */
+  .hero-section {
+    position: relative; 
+    isolation: isolate; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; 
+  }
+  .bg-video {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: -2; 
+  }
+  .video-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 15, 18, 0.7); z-index: -1; 
+  }
+  .hero-content { max-width: 800px; z-index: 1; }
+  .hero-title {
+    color: var(--color-sun-gold); font-size: 4rem; text-transform: uppercase;
+    letter-spacing: 4px; margin-bottom: 1rem; text-shadow: 0 0 15px var(--color-sun-glow); 
+  }
+  .hero-subtitle { font-size: 1.5rem; margin-bottom: 2.5rem; line-height: 1.6; }
+  .cta-button {
+    display: inline-block; padding: 15px 35px; background-color: transparent;
+    color: var(--color-sun-gold); text-decoration: none; font-size: 1.2rem;
+    font-weight: bold; border: 2px solid var(--color-sun-gold); border-radius: 5px;
+    text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; 
+  }
+  .cta-button:hover {
+    background-color: var(--color-sun-gold); color: var(--color-bg-dark); 
+    box-shadow: 0 0 20px var(--color-sun-glow); 
+  }
 
-	.hero-section {
-		position: relative;
-		/* ¡NUEVO! Crea un universo cerrado para que el video no se pierda detrás del body */
-		isolation: isolate;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		text-align: center;
-		padding: 0 20px;
-		overflow: hidden;
-	}
+  /* --- NUEVOS ESTILOS: SECCIÓN PACTO --- */
+  .pacto-section {
+    min-height: 100vh; /* Ocupa al menos otra pantalla completa hacia abajo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    /* Un ligero degradado para separar el Hero del Pacto */
+    background: linear-gradient(to bottom, var(--color-bg-dark) 0%, rgb(10, 10, 12) 100%);
+  }
 
-	.bg-video {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+  .pacto-content {
+    max-width: 700px;
+  }
 
-	.video-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(15, 15, 18, 0.7);
-		z-index: -1;
-	}
+  .pacto-title {
+    color: var(--color-sun-gold);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
 
-	.hero-content {
-		max-width: 800px;
-		z-index: 1;
-	}
+  .pacto-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
 
-	.hero-title {
-		color: var(--color-sun-gold);
-		font-size: 4rem;
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		margin-bottom: 1rem;
-		text-shadow: 0 0 15px var(--color-sun-glow);
-	}
+  /* --- MAGIA DE LA ANIMACIÓN --- */
+  .hidden-scroll {
+    opacity: 0; /* Totalmente invisible */
+    transform: translateY(100px); /* Empujado 100 pixeles hacia abajo hacia el abismo */
+    transition: all 1s ease-out; /* La animación tomará 1 segundo en completarse */
+  }
 
-	.hero-subtitle {
-		font-size: 1.5rem;
-		margin-bottom: 2.5rem;
-		line-height: 1.6;
-	}
-
-	.cta-button {
-		display: inline-block;
-		padding: 15px 35px;
-		background-color: transparent;
-		color: var(--color-sun-gold);
-		text-decoration: none;
-		font-size: 1.2rem;
-		font-weight: bold;
-		border: 2px solid var(--color-sun-gold);
-		border-radius: 5px;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		transition: all 0.3s ease;
-	}
-
-	.cta-button:hover {
-		background-color: var(--color-sun-gold);
-		color: var(--color-bg-dark);
-		box-shadow: 0 0 20px var(--color-sun-glow);
-	}
+  .show-scroll {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Sube y regresa a su posición original */
+  }
 </style>
+
+<script>
+  // 1. Astro procesa este script por ti. Seleccionamos el elemento a observar.
+  const hiddenElements = document.querySelectorAll('.hidden-scroll');
+
+  // 2. Creamos nuestro vigilante (Observer)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // Si el usuario scrolleó lo suficiente y el elemento entró a la pantalla...
+      if (entry.isIntersecting) {
+        // Le inyectamos la clase que activa la transición CSS
+        entry.target.classList.add('show-scroll');
+      }
+    });
+  }, {
+    threshold: 0.3 // El vigilante avisa cuando el 30% del contenedor es visible
+  });
+
+  // 3. Le decimos al vigilante a quiénes debe mirar
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
