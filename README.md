@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="480" height="268" alt="image" src="https://github.com/user-attachments/assets/574b156d-35fd-4b6b-b2cd-defdc21b4f4c" alt="Solaire of Astora Web Preview" width="100%">
+    <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/657b7e98-dd31-4ab1-974d-7d8f81aa7f6a" />
 </p>
 
 # ☀️ Solaire of Astora | Frontend Web
