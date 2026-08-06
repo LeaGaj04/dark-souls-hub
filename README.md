@@ -20,6 +20,15 @@ Este proyecto es una página web moderna, interactiva y de fantasía oscura desa
 
 ---
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Astro">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License MIT">
+</p>
+
+---
+
 ## ✨ Características Principales
 
 1. **Sección Hero Inmersiva**: Video de fondo en bucle con una capa de contraste (*overlay*) y tipografías épicas.
