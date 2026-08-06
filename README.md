@@ -11,7 +11,7 @@ Este proyecto es una página web moderna, interactiva y de fantasía oscura desa
 
 ---
 
-## 🛠️ Tecnologías y Herramientas Utilizadas
+## Tecnologías y Herramientas Utilizadas
 
 * **[Astro](https://astro.build/)**: Framework web moderno enfocado en el rendimiento.
 * **TypeScript (Strict Mode)**: Para garantizar un tipado estático seguro y robusto.
@@ -34,7 +34,7 @@ Este proyecto es una página web moderna, interactiva y de fantasía oscura desa
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 1. **Sección Hero Inmersiva**: Video de fondo en bucle con una capa de contraste (*overlay*) y tipografías épicas.
 2. **Efectos de Brillo (Glow)**: Uso avanzado de sombras (`text-shadow` y `box-shadow`) para simular fuentes de luz.
@@ -44,7 +44,7 @@ Este proyecto es una página web moderna, interactiva y de fantasía oscura desa
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto Localmente
+## Cómo Ejecutar el Proyecto Localmente
 
 Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu computadora. Luego, ejecuta los siguientes comandos en tu terminal:
 
@@ -61,7 +61,7 @@ npm install
 # 4. Inicia el servidor de desarrollo
 npm run dev
 
-## 👀 Want to learn more?
+## Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 ```
@@ -76,9 +76,9 @@ Praise the Sun! ☀️
 npm create astro@latest -- --template basics
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+>  **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -100,7 +100,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
