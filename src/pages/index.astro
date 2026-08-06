@@ -1,6 +1,5 @@
 ---
-// Aquí vivirá nuestra lógica de TypeScript en el futuro.
-// Por ahora, lo mantenemos limpio.
+// Lógica de servidor (vacía por ahora)
 ---
 
 <html lang="es">
@@ -10,38 +9,89 @@
     <title>Solaire of Astora | Praise the Sun</title>
   </head>
   <body>
-    <main>
-      <h1>Praise the Sun!</h1>
-      <p>La oscuridad se cierne, pero la luz prevalecerá.</p>
+    <main class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Solaire de Astora</h1>
+        <p class="hero-subtitle">El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!</p>
+        
+        <a href="#pacto" class="cta-button">Únete al Pacto</a>
+      </div>
     </main>
   </body>
 </html>
 
 <style>
-  /* Declaración de Variables CSS Globales */
+  /* Variables CSS Globales */
   :root {
-    --color-bg-dark: rgb(15, 15, 18); /* Un negro profundo con un toque azulado */
-    --color-sun-gold: #FDB813; /* El dorado clásico de Solaire */
-    --color-text-light: hsl(0, 0%, 85%); /* Un gris claro, menos agresivo a la vista que el blanco puro */
+    --color-bg-dark: rgb(15, 15, 18);
+    --color-sun-gold: #FDB813;
+    --color-text-light: hsl(0, 0%, 85%);
+    /* Usamos RGBA para crear un color dorado con 40% de opacidad para los brillos */
+    --color-sun-glow: rgba(253, 184, 19, 0.4); 
   }
 
-  /* Reseteo básico y aplicación de nuestro tema */
+  /* Reseteo básico */
   body {
     margin: 0;
     padding: 0;
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);
     font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* --- ESTILOS DE LA SECCIÓN HERO --- */
+  
+  .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Ocupa el 100% del alto de la ventana del navegador */
+    text-align: center;
+    padding: 0 20px;
   }
 
-  h1 {
+  .hero-content {
+    max-width: 800px; /* Evita que el texto sea infinito en monitores gigantes */
+  }
+
+  .hero-title {
     color: var(--color-sun-gold);
-    font-size: 3rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    /* text-shadow crea un efecto de resplandor inmersivo detrás del texto */
+    text-shadow: 0 0 15px var(--color-sun-glow); 
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  /* --- ESTILOS DEL BOTÓN (UI/UX) --- */
+  
+  .cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--color-sun-gold);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid var(--color-sun-gold);
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    /* Transition es magia pura: hace que los cambios al pasar el mouse tomen 0.3 segundos y se vean fluidos */
+    transition: all 0.3s ease; 
+  }
+
+  /* El estado :hover se activa cuando el usuario pasa el mouse por encima */
+  .cta-button:hover {
+    background-color: var(--color-sun-gold);
+    color: var(--color-bg-dark); /* Invertimos los colores para contraste */
+    box-shadow: 0 0 20px var(--color-sun-glow); /* El botón emite luz al interactuar */
   }
 </style>
