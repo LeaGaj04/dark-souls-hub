@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Aquí vivirá nuestra lógica de TypeScript en el futuro.
+// Por ahora, lo mantenemos limpio.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solaire of Astora | Praise the Sun</title>
+  </head>
+  <body>
+    <main>
+      <h1>Praise the Sun!</h1>
+      <p>La oscuridad se cierne, pero la luz prevalecerá.</p>
+    </main>
+  </body>
+</html>
+
+<style>
+  /* Declaración de Variables CSS Globales */
+  :root {
+    --color-bg-dark: rgb(15, 15, 18); /* Un negro profundo con un toque azulado */
+    --color-sun-gold: #FDB813; /* El dorado clásico de Solaire */
+    --color-text-light: hsl(0, 0%, 85%); /* Un gris claro, menos agresivo a la vista que el blanco puro */
+  }
+
+  /* Reseteo básico y aplicación de nuestro tema */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
+    color: var(--color-sun-gold);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+</style>
