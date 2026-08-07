@@ -1,30 +1,3 @@
-
-<p align="center">
-    <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/657b7e98-dd31-4ab1-974d-7d8f81aa7f6a" />
-</p>
-
-# ☀️ Solaire of Astora | Frontend Web
-
-> *"El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!"* — Solaire de Astora
-
-Este proyecto es una página web moderna, interactiva y de fantasía oscura desarrollada como parte de una mentoría práctica de Frontend con **Astro**. Está inspirada en la atmósfera inmersiva de *Dark Souls*, rindiendo homenaje al caballero Solaire de Astora.
-
----
-
-## Tecnologías y Herramientas Utilizadas
-
-* **[Astro](https://astro.build/)**: Framework web moderno enfocado en el rendimiento.
-* **TypeScript (Strict Mode)**: Para garantizar un tipado estático seguro y robusto.
-* **CSS3 Moderno**: 
-  * Variables CSS (`:root`) para la gestión de paletas temáticas.
-  * Sistemas **HEX**, **RGB/RGBA** y **HSL** para lograr brillos y sombras dinámicas.
-  * **Flexbox** y **CSS Grid** para estructuras adaptables (*responsive*).
-* **JavaScript (Vanilla)**: 
-  * API nativa **Intersection Observer** para animaciones fluidas al hacer scroll.
-* **Git & GitHub**: Control de versiones profesional aplicando *Conventional Commits*.
-
----
-
 <p align="center">
   <img src="https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Astro">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
@@ -32,85 +5,60 @@ Este proyecto es una página web moderna, interactiva y de fantasía oscura desa
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License MIT">
 </p>
 
----
+# 🏰 Dark Souls Hub | Lordran Database
 
-## Características Principales
+> *"Solo en la oscuridad pueden brillar verdaderamente las almas."*
 
-1. **Sección Hero Inmersiva**: Video de fondo en bucle con una capa de contraste (*overlay*) y tipografías épicas.
-2. **Efectos de Brillo (Glow)**: Uso avanzado de sombras (`text-shadow` y `box-shadow`) para simular fuentes de luz.
-3. **Animaciones de Scroll**: Contenido que emerge suavemente de las sombras a medida que el usuario navega.
-4. **Cuadrícula de Reliquias**: Tarjetas interactivas con efectos de elevación en 3D (`translateY`) mediante CSS Grid.
-5. **Redirecciones Seguras**: Enlaces optimizados hacia plataformas externas con atributos de seguridad (`rel="noopener noreferrer"`).
+Este proyecto es una aplicación web Frontend moderna y de alto rendimiento construida con **Astro**. Funciona como una base de datos interactiva e inmersiva sobre el universo del videojuego *Dark Souls*, abarcando su historia, sus jefes legendarios y sus personajes más icónicos.
+
+🌍 **Mira el proyecto en vivo aquí:** [Dark Souls Hub en Vercel](https://dark-soul-web.vercel.app/)
 
 ---
 
-## Cómo Ejecutar el Proyecto Localmente
+<p align="center">
+  <img src="./public/images/demo.png" alt="Dark Souls Hub Web Preview" width="100%">
+</p>
 
-Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu computadora. Luego, ejecuta los siguientes comandos en tu terminal:
+---
+
+## 🛠️ Tecnologías y Arquitectura
+
+Este proyecto fue desarrollado bajo una arquitectura moderna enfocada en el rendimiento estático y la experiencia de usuario (UX):
+
+* **[Astro](https://astro.build/)**: Framework web principal. Su sistema de enrutamiento basado en archivos nos permite manejar múltiples secciones (Historia, Jefes) con un peso casi nulo de JavaScript.
+* **TypeScript (Strict Mode)**: Para garantizar código seguro y mantenible.
+* **CSS3 Moderno**: 
+  * Diseño 100% Responsive sin Media Queries utilizando **CSS Grid** (`auto-fit`, `minmax`).
+  * Sistemas **HEX**, **RGB/RGBA** y **HSL** combinados con variables nativas (`:root`).
+  * Uso avanzado de `z-index`, `isolation` y sombras (`box-shadow`, `text-shadow`) para crear profundidad 3D y efectos de resplandor.
+* **JavaScript (Vanilla)**: 
+  * Implementación nativa de la API **Intersection Observer** para revelar contenido fluidamente al hacer scroll, maximizando el rendimiento.
+* **CI/CD**: Despliegue continuo automatizado a través de **Vercel** conectado directamente a GitHub.
+
+---
+
+## ✨ Características Principales
+
+1. **Portal Hero Inmersivo**: Video de fondo de alta resolución optimizado, con un *overlay* oscuro y navegación de anclaje suave (`scroll-behavior: smooth`).
+2. **Navegación Interactiva**: Tarjetas de menú construidas con CSS Grid que incluyen efectos físicos de levitación (`transform: translateY`).
+3. **Optimización SEO y Performance**: Gracias a la naturaleza de Astro, el sitio carga a velocidades extremas al entregar HTML puro por defecto.
+4. **Cultura Open Source**: El repositorio actúa como una ventana al proceso de desarrollo, invitando a otros desarrolladores a explorar el código y aprender.
+
+---
+
+## 🚀 Cómo Ejecutar el Proyecto Localmente
+
+Si deseas explorar el código fuente en tu propia máquina, sigue estos pasos (requiere [Node.js](https://nodejs.org/)):
 
 ```bash
 # 1. Clona el repositorio
-git clone [https://github.com/tu-usuario/solaire-astora-web.git](https://github.com/tu-usuario/solaire-astora-web.git)
+git clone [https://github.com/TU-USUARIO/dark-souls-hub.git](https://github.com/TU-USUARIO/dark-souls-hub.git)
 
 # 2. Entra a la carpeta del proyecto
-cd solaire-astora-web
+cd dark-souls-hub
 
 # 3. Instala las dependencias
 npm install
 
 # 4. Inicia el servidor de desarrollo
 npm run dev
-
-## Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-```
-
-El sitio web estará disponible en http://localhost:4321.
-
-Praise the Sun! ☀️
-
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
->  **Seasoned astronaut?** Delete this file. Have fun!
-
-## Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-
