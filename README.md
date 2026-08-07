@@ -5,13 +5,13 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License MIT">
 </p>
 
-# 🏰 Dark Souls Hub | Lordran Database
+# Dark Souls Hub | Lordran Database
 
 > *"Solo en la oscuridad pueden brillar verdaderamente las almas."*
 
 Este proyecto es una aplicación web Frontend moderna y de alto rendimiento construida con **Astro**. Funciona como una base de datos interactiva e inmersiva sobre el universo del videojuego *Dark Souls*, abarcando su historia, sus jefes legendarios y sus personajes más icónicos.
 
-🌍 **Mira el proyecto en vivo aquí:** [Dark Souls Hub en Vercel](https://dark-soul-web.vercel.app/)
+ **Mira el proyecto en vivo aquí:** [Dark Souls Hub en Vercel](https://dark-soul-web.vercel.app/)
 
 ---
 
@@ -21,7 +21,7 @@ Este proyecto es una aplicación web Frontend moderna y de alto rendimiento cons
 
 ---
 
-## 🛠️ Tecnologías y Arquitectura
+## Tecnologías y Arquitectura
 
 Este proyecto fue desarrollado bajo una arquitectura moderna enfocada en el rendimiento estático y la experiencia de usuario (UX):
 
@@ -37,7 +37,7 @@ Este proyecto fue desarrollado bajo una arquitectura moderna enfocada en el rend
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 1. **Portal Hero Inmersivo**: Video de fondo de alta resolución optimizado, con un *overlay* oscuro y navegación de anclaje suave (`scroll-behavior: smooth`).
 2. **Navegación Interactiva**: Tarjetas de menú construidas con CSS Grid que incluyen efectos físicos de levitación (`transform: translateY`).
@@ -46,7 +46,7 @@ Este proyecto fue desarrollado bajo una arquitectura moderna enfocada en el rend
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto Localmente
+## Cómo Ejecutar el Proyecto Localmente
 
 Si deseas explorar el código fuente en tu propia máquina, sigue estos pasos (requiere [Node.js](https://nodejs.org/)):
 
