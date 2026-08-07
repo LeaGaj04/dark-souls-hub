@@ -1,5 +1,5 @@
 ---
-// Lógica de servidor
+// Lógica de servidor (si necesitas algo más adelante)
 ---
 
 <html lang="es">
@@ -9,37 +9,64 @@
     <title>Dark Souls Hub | Lordran Database</title>
   </head>
   <body>
+
     <main class="hero-section">
-      <video class="bg-video" autoplay loop muted playsinline>
-        <source src="/hoguera.mp4" type="video/mp4" />
-      </video>
+      <img src="/public/44.jpg" alt="Solaire under the Sun" class="bg-image" />
+      
       <div class="video-overlay"></div>
+      
       <div class="hero-content">
-        <h1 class="hero-title">Explora Lordran</h1>
+        <h1 class="hero-title">EXPLORA LORDRAN</h1>
         <p class="hero-subtitle">Una base de datos incandescente sobre el universo de Dark Souls: historia, jefes y el lore de los caídos.</p>
-        
         <a href="#portal" class="cta-button">Entrar al Abismo</a>
       </div>
     </main>
 
+    <section class="origenes-section">
+      <div class="container">
+        <h2 class="portal-heading">Orígenes de la Oscuridad</h2>
+        <div class="creator-cards">
+          <article class="creator-card">
+            <h3 class="creator-name">Hidetaka Miyazaki</h3>
+            <p class="creator-text">El visionario director y creador de la saga Souls, conocido por su intrincado diseño de niveles y narrativa fragmentada.</p>
+          </article>
+          <article class="creator-card">
+            <h3 class="creator-name">FromSoftware</h3>
+            <p class="creator-text">El legendario estudio de desarrollo japonés que forjó una nueva era de juegos de acción y rol desafiantes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="memorias-section">
+      <div class="container">
+        <h2 class="portal-heading">Memorias de Lordran</h2>
+        <p class="section-subtitle-small">Instantes capturados en el abismo de un mundo caído.</p>
+        <div class="memorias-gallery">
+          <img src="/images/38878.jpg" alt="Captura 1" class="memoria-pic" />
+          <img src="/images/38877.jpg" alt="Captura 2" class="memoria-pic" />
+          <img src="/images/38876.jpg" alt="Captura 3" class="memoria-pic" />
+        </div>
+      </div>
+    </section>
+
     <section id="portal" class="portal-section">
-      <h2 class="portal-heading">Secciones del Reino</h2>
-      
-      <div class="grid-portal">
-        <a href="/historia" class="portal-card">
-          <h3 class="card-title">Lore & Historia</h3>
-          <p class="card-text">Desde la Edad de los Antiguos hasta la Primera Llama.</p>
-        </a>
-        
-        <a href="/jefes" class="portal-card">
-          <h3 class="card-title">Jefes Legendarios</h3>
-          <p class="card-text">Estrategias y trasfondo de los portadores de Almas de Señor.</p>
-        </a>
-        
-        <a href="/solaire" class="portal-card">
-          <h3 class="card-title">Guerreros del Sol</h3>
-          <p class="card-text">Homenaje a Solaire de Astora y sus milagros.</p>
-        </a>
+      <div class="container">
+        <h2 class="portal-heading">Secciones del Reino</h2>
+        <div class="grid-portal">
+          <a href="/historia" class="portal-card">
+            <h3 class="card-title">Lore & Historia</h3>
+            <p class="card-text">Desde la Edad de los Antiguos hasta la Primera Llama.</p>
+          </a>
+          <a href="/jefes" class="portal-card">
+            <h3 class="card-title">Jefes Legendarios</h3>
+            <p class="card-text">Estrategias y trasfondo de los portadores de Almas de Señor.</p>
+          </a>
+          <a href="/solaire" class="portal-card">
+            <h3 class="card-title">Guerreros del Sol</h3>
+            <p class="card-text">Homenaje a Solaire de Astora y sus milagros.</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -57,80 +84,61 @@
 </html>
 
 <style>
+  /* VARIABLES CSS (Sin cambios, manteniendo el negro puro) */
   :root {
-    --color-bg-dark: rgb(15, 15, 18);
+    --color-bg-dark: rgb(0, 0, 0); /* Negro Puro ahora */
+    --color-bg-dark-alt: rgb(15, 15, 18); /* Un gris muy oscuro para tarjetas */
     --color-sun-gold: #FDB813;
     --color-text-light: hsl(0, 0%, 85%);
     --color-sun-glow: rgba(253, 184, 19, 0.4); 
   }
 
+  /* ESTILOS GLOBALES */
   body { margin: 0; padding: 0; background-color: var(--color-bg-dark); color: var(--color-text-light); font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
   
+  /* --- 1. ESTILOS HERO (ACTUALIZADOS CON FOTO Y DEGRADADO) --- */
   .hero-section { position: relative; isolation: isolate; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; padding: 0 20px; overflow: hidden; }
-  .bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-  .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 15, 18, 0.7); z-index: -1; }
+  .bg-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  
+  /* Degradado para fundir la foto a negro */
+  .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    /* Degradado lineal de transparente arriba a negro puro abajo */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 60%, var(--color-bg-dark) 100%); z-index: -1; }
+    
   .hero-content { max-width: 800px; z-index: 1; }
   .hero-title { color: var(--color-sun-gold); font-size: 4rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 1rem; text-shadow: 0 0 15px var(--color-sun-glow); }
   .hero-subtitle { font-size: 1.5rem; margin-bottom: 2.5rem; line-height: 1.6; }
   .cta-button { display: inline-block; padding: 15px 35px; background-color: transparent; color: var(--color-sun-gold); text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid var(--color-sun-gold); border-radius: 5px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; }
   .cta-button:hover { background-color: var(--color-sun-gold); color: var(--color-bg-dark); box-shadow: 0 0 20px var(--color-sun-glow); }
 
-  .portal-section {
-    padding: 100px 20px;
-    background-color: var(--color-bg-dark);
-    text-align: center;
-  }
+  /* TÍTULOS GENERALES DE SECCIÓN */
+  .portal-heading { color: #ffffff; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px; text-align: center; border-bottom: 1px solid rgba(253, 184, 19, 0.2); padding-bottom: 20px;}
 
-  .portal-heading {
-    color: #ffffff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-  }
+  /* --- 2. NUEVA SECCIÓN: ORÍGENES (SOBRE EL FONDO NEGRO) --- */
+  .origenes-section { padding: 100px 0; background-color: var(--color-bg-dark); }
+  .creator-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .creator-card { background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(253, 184, 19, 0.1); border-radius: 10px; padding: 30px 20px; transition: all 0.4s ease; border-left: 3px solid transparent; }
+  .creator-card:hover { border-left-color: var(--color-sun-gold); background-color: rgba(255, 255, 255, 0.05); }
+  .creator-name { color: var(--color-sun-gold); font-size: 1.5rem; margin-top: 0; margin-bottom: 10px; }
+  .creator-text { line-height: 1.6; color: hsl(0, 0%, 75%); font-size: 0.95rem; }
 
-  .grid-portal {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  /* --- 3. NUEVA SECCIÓN: CAPTURAS DEL JUEGO --- */
+  .memorias-section { padding: 100px 0; background-color: var(--color-bg-dark); text-align: center;}
+  .section-subtitle-small { color: hsl(0, 0%, 60%); font-style: italic; margin-bottom: 40px; margin-top: -30px; font-size: 1rem; }
+  .memorias-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .memoria-pic { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 1px solid transparent; transition: all 0.3s ease; }
+  .memoria-pic:hover { border-color: var(--color-sun-gold); box-shadow: 0 0 15px var(--color-sun-glow); transform: scale(1.03); }
 
-  .portal-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(253, 184, 19, 0.1);
-    border-radius: 10px;
-    padding: 40px 25px;
-    text-decoration: none; 
-    color: inherit; 
-    transition: all 0.4s ease;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-  }
+  /* --- 4. TU PORTAL DE NAVEGACIÓN (MANTENIDO Y REFINADO) --- */
+  .portal-section { padding: 100px 0; background-color: var(--color-bg-dark); text-align: center; }
+  .grid-portal { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+  .portal-card { background-color: var(--color-bg-dark-alt); border: 1px solid rgba(253, 184, 19, 0.1); border-radius: 10px; padding: 40px 25px; text-decoration: none; color: inherit; transition: all 0.4s ease; display: flex; flex-direction: column; justify-content: center; }
+  .card-title { color: var(--color-sun-gold); font-size: 1.5rem; margin-bottom: 15px; letter-spacing: 1px; }
+  .card-text { line-height: 1.6; color: hsl(0, 0%, 75%); font-size: 1rem; margin: 0; }
+  .portal-card:hover { border-color: var(--color-sun-gold); transform: translateY(-10px) scale(1.02); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); }
 
-  .card-title {
-    color: var(--color-sun-gold);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-  }
-
-  .card-text {
-    line-height: 1.6;
-    color: hsl(0, 0%, 75%);
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .portal-card:hover {
-    background-color: rgba(253, 184, 19, 0.05);
-    border-color: var(--color-sun-gold);
-    transform: translateY(-10px) scale(1.02); 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-  }
-
+  /* --- FOOTER (Sin cambios) --- */
   .footer-section { background-color: rgb(8, 8, 10); padding: 60px 20px; text-align: center; border-top: 1px solid var(--color-sun-glow); }
   .footer-title { color: var(--color-text-light); font-size: 1.5rem; margin-bottom: 2rem; letter-spacing: 1px; }
   .social-links { display: flex; justify-content: center; gap: 30px; }
