@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solaire of Astora | Praise the Sun</title>
+    <title>Dark Souls Hub | Lordran Database</title>
   </head>
   <body>
     <main class="hero-section">
@@ -15,42 +15,41 @@
       </video>
       <div class="video-overlay"></div>
       <div class="hero-content">
-        <h1 class="hero-title">Solaire de Astora</h1>
-        <p class="hero-subtitle">El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!</p>
-        <a href="#pacto" class="cta-button">Únete al Pacto</a>
+        <h1 class="hero-title">Explora Lordran</h1>
+        <p class="hero-subtitle">Una base de datos incandescente sobre el universo de Dark Souls: historia, jefes y el lore de los caídos.</p>
+        
+        <a href="#portal" class="cta-button">Entrar al Abismo</a>
       </div>
     </main>
 
-    <section id="pacto" class="pacto-section">
-      <div class="pacto-content hidden-scroll"> 
-        <h2 class="pacto-title">El Pacto de la Luz Solar</h2>
-        <p class="pacto-text">Solo aquellos con el valor de enfrentar la oscuridad pueden unirse a nuestras filas. Comparte tu incandescencia con los mundos conectados.</p>
-      </div>
-    </section>
-
-	<section id="reliquias" class="reliquias-section">
-      <h2 class="reliquias-title">Reliquias de Astora</h2>
-      <p class="reliquias-subtitle">El equipo forjado en la luz para combatir el Abismo.</p>
+    <section id="portal" class="portal-section">
+      <h2 class="portal-heading">Secciones del Reino</h2>
       
-      <div class="grid-container">
-        <article class="card">
-          <h3 class="card-title">Espada Recta de Luz Solar</h3>
-          <p class="card-text">Un arma ordinaria, pero imbuida con una fe inquebrantable y un diseño incandescente.</p>
-        </article>
+      <div class="grid-portal">
+        <a href="/historia" class="portal-card">
+          <h3 class="card-title">Lore & Historia</h3>
+          <p class="card-text">Desde la Edad de los Antiguos hasta la Primera Llama.</p>
+        </a>
         
-        <article class="card">
-          <h3 class="card-title">Escudo de Luz Solar</h3>
-          <p class="card-text">Decorado con el símbolo sagrado, un faro de esperanza para los aliados en batalla.</p>
-        </article>
+        <a href="/jefes" class="portal-card">
+          <h3 class="card-title">Jefes Legendarios</h3>
+          <p class="card-text">Estrategias y trasfondo de los portadores de Almas de Señor.</p>
+        </a>
         
-        <article class="card">
-          <h3 class="card-title">Talismán de Luz de Sol</h3>
-          <p class="card-text">Catalizador de milagros divinos, entregado solo a los guerreros más devotos del pacto.</p>
-        </article>
+        <a href="/solaire" class="portal-card">
+          <h3 class="card-title">Guerreros del Sol</h3>
+          <p class="card-text">Homenaje a Solaire de Astora y sus milagros.</p>
+        </a>
+
+        <a href="https://github.com/tu-usuario/solaire-astora-web" target="_blank" rel="noopener noreferrer" class="portal-card process-card">
+          <h3 class="card-title">🏗️ Ver el Proceso</h3>
+          <p class="card-text">Explora el código fuente, la arquitectura Astro y el viaje de debugging.</p>
+          <span class="star-icon">⭐ ¡Apoya con una Estrella!</span>
+        </a>
       </div>
     </section>
 
-	<footer class="footer-section">
+    <footer class="footer-section">
       <div class="footer-content">
         <h3 class="footer-title">Forja tu propio destino</h3>
         <div class="social-links">
@@ -64,102 +63,7 @@
 </html>
 
 <style>
-
-/* --- ESTILOS DE LA SECCIÓN RELIQUIAS (CSS GRID) --- */
-  .reliquias-section {
-    padding: 100px 20px;
-    background-color: var(--color-bg-dark);
-    text-align: center;
-  }
-
-  .reliquias-title {
-    color: var(--color-sun-gold);
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-
-  .reliquias-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    color: var(--color-text-light);
-  }
-
-  /* LA MAGIA DEL GRID */
-  .grid-container {
-    display: grid;
-    /* Esto hace que las cartas se acomoden solas dependiendo del tamaño de la pantalla */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
-  }
-
-  /* ESTILOS DE LAS CARTAS (UI) */
-  .card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(253, 184, 19, 0.2); /* Borde dorado muy tenue */
-    border-radius: 8px;
-    padding: 30px 20px;
-    transition: all 0.4s ease;
-  }
-
-  .card-title {
-    color: #ffffff;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-  }
-
-  .card-text {
-    line-height: 1.6;
-    color: hsl(0, 0%, 75%);
-  }
-
-  /* EFECTO HOVER EN LAS CARTAS */
-  .card:hover {
-    background-color: rgba(253, 184, 19, 0.1); /* Fondo se tiñe ligeramente de dorado */
-    border-color: var(--color-sun-gold);
-    /* translateY levanta la carta hacia arriba creando un efecto 3D */
-    transform: translateY(-10px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
-	/* --- ESTILOS DEL FOOTER --- */
-  .footer-section {
-    background-color: rgb(8, 8, 10); /* Un abismo aún más oscuro que el fondo principal */
-    padding: 60px 20px;
-    text-align: center;
-    border-top: 1px solid var(--color-sun-glow); /* Una línea dorada sutil que marca el final de la página */
-  }
-
-  .footer-title {
-    color: var(--color-text-light);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Flexbox puro: crea un espaciado exacto de 30px entre cada enlace sin usar márgenes manuales */
-  }
-
-  .social-link {
-    color: var(--color-sun-gold);
-    text-decoration: none; /* Quita el subrayado azul feo que traen los enlaces por defecto */
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .social-link:hover {
-    color: #ffffff; /* Al pasar el mouse, la luz se intensifica a blanco puro */
-    text-shadow: 0 0 15px var(--color-sun-gold);
-  }
-
+  /* VARIABLES CSS (Sin cambios) */
   :root {
     --color-bg-dark: rgb(15, 15, 18);
     --color-sun-gold: #FDB813;
@@ -167,111 +71,103 @@
     --color-sun-glow: rgba(253, 184, 19, 0.4); 
   }
 
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
-    font-family: system-ui, -apple-system, sans-serif;
-    overflow-x: hidden; 
-  }
+  /* ESTILOS GLOBALES (Sin cambios) */
+  body { margin: 0; padding: 0; background-color: var(--color-bg-dark); color: var(--color-text-light); font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; scroll-behavior: smooth; /* Para que el botón CTA baje suavemente */ }
   
-  /* --- ESTILOS HERO (Sin cambios) --- */
-  .hero-section {
-    position: relative; 
-    isolation: isolate; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden; 
-  }
-  .bg-video {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    object-fit: cover; z-index: -2; 
-  }
-  .video-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(15, 15, 18, 0.7); z-index: -1; 
-  }
+  /* ESTILOS HERO (Actualizados ligeramente para el nuevo texto) */
+  .hero-section { position: relative; isolation: isolate; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; padding: 0 20px; overflow: hidden; }
+  .bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 15, 18, 0.7); z-index: -1; }
   .hero-content { max-width: 800px; z-index: 1; }
-  .hero-title {
-    color: var(--color-sun-gold); font-size: 4rem; text-transform: uppercase;
-    letter-spacing: 4px; margin-bottom: 1rem; text-shadow: 0 0 15px var(--color-sun-glow); 
-  }
+  .hero-title { color: var(--color-sun-gold); font-size: 4rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 1rem; text-shadow: 0 0 15px var(--color-sun-glow); }
   .hero-subtitle { font-size: 1.5rem; margin-bottom: 2.5rem; line-height: 1.6; }
-  .cta-button {
-    display: inline-block; padding: 15px 35px; background-color: transparent;
-    color: var(--color-sun-gold); text-decoration: none; font-size: 1.2rem;
-    font-weight: bold; border: 2px solid var(--color-sun-gold); border-radius: 5px;
-    text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; 
-  }
-  .cta-button:hover {
-    background-color: var(--color-sun-gold); color: var(--color-bg-dark); 
-    box-shadow: 0 0 20px var(--color-sun-glow); 
-  }
+  .cta-button { display: inline-block; padding: 15px 35px; background-color: transparent; color: var(--color-sun-gold); text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid var(--color-sun-gold); border-radius: 5px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; }
+  .cta-button:hover { background-color: var(--color-sun-gold); color: var(--color-bg-dark); box-shadow: 0 0 20px var(--color-sun-glow); }
 
-  /* --- NUEVOS ESTILOS: SECCIÓN PACTO --- */
-  .pacto-section {
-    min-height: 100vh; /* Ocupa al menos otra pantalla completa hacia abajo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* --- ESTILOS DE LA NUEVA SECCIÓN PORTAL (CSS Grid) --- */
+  .portal-section {
+    padding: 100px 20px;
+    background-color: var(--color-bg-dark);
     text-align: center;
-    padding: 0 20px;
-    /* Un ligero degradado para separar el Hero del Pacto */
-    background: linear-gradient(to bottom, var(--color-bg-dark) 0%, rgb(10, 10, 12) 100%);
   }
 
-  .pacto-content {
-    max-width: 700px;
-  }
-
-  .pacto-title {
-    color: var(--color-sun-gold);
-    font-size: 3rem;
+  .portal-heading {
+    color: #ffffff;
+    font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 50px;
   }
 
-  .pacto-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
+  /* REUTILIZAMOS LA LÓGICA DE GRID QUE APRENDISTE */
+  .grid-portal {
+    display: grid;
+    /* Diseño adaptable automático */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  /* --- MAGIA DE LA ANIMACIÓN --- */
-  .hidden-scroll {
-    opacity: 0; /* Totalmente invisible */
-    transform: translateY(100px); /* Empujado 100 pixeles hacia abajo hacia el abismo */
-    transition: all 1s ease-out; /* La animación tomará 1 segundo en completarse */
+  /* ESTILOS DE LAS CARTAS (Convertidas en enlaces <a>) */
+  .portal-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(253, 184, 19, 0.1);
+    border-radius: 10px;
+    padding: 40px 25px;
+    text-decoration: none; /* Quitamos subrayado */
+    color: inherit; /* Heredamos color de texto */
+    transition: all 0.4s ease;
+    display: flex; /* Para alinear contenido internamente */
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .show-scroll {
-    opacity: 1; /* Se vuelve visible */
-    transform: translateY(0); /* Sube y regresa a su posición original */
+  .card-title {
+    color: var(--color-sun-gold);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
   }
+
+  .card-text {
+    line-height: 1.6;
+    color: hsl(0, 0%, 75%);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* EFECTO HOVER DE ELEVACIÓN EN 3D (Reforzado) */
+  .portal-card:hover {
+    background-color: rgba(253, 184, 19, 0.05);
+    border-color: var(--color-sun-gold);
+    transform: translateY(-10px) scale(1.02); /* Sube y se agranda ligeramente */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ESTILOS ESPECÍFICOS PARA LA CARTA DEL PROCESO */
+  .process-card {
+    background-color: rgba(253, 184, 19, 0.03); /* Un tono más dorado */
+    border: 2px dashed rgba(253, 184, 19, 0.3); /* Borde discontinuo para destacar */
+  }
+
+  .star-icon {
+    margin-top: 20px;
+    display: inline-block;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: rgba(253, 184, 19, 0.8);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* --- ESTILOS DEL FOOTER (Sin cambios) --- */
+  .footer-section { background-color: rgb(8, 8, 10); padding: 60px 20px; text-align: center; border-top: 1px solid var(--color-sun-glow); }
+  .footer-title { color: var(--color-text-light); font-size: 1.5rem; margin-bottom: 2rem; letter-spacing: 1px; }
+  .social-links { display: flex; justify-content: center; gap: 30px; }
+  .social-link { color: var(--color-sun-gold); text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; }
+  .social-link:hover { color: #ffffff; text-shadow: 0 0 15px var(--color-sun-gold); }
 </style>
-
-<script>
-  // 1. Astro procesa este script por ti. Seleccionamos el elemento a observar.
-  const hiddenElements = document.querySelectorAll('.hidden-scroll');
-
-  // 2. Creamos nuestro vigilante (Observer)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // Si el usuario scrolleó lo suficiente y el elemento entró a la pantalla...
-      if (entry.isIntersecting) {
-        // Le inyectamos la clase que activa la transición CSS
-        entry.target.classList.add('show-scroll');
-      }
-    });
-  }, {
-    threshold: 0.3 // El vigilante avisa cuando el 30% del contenedor es visible
-  });
-
-  // 3. Le decimos al vigilante a quiénes debe mirar
-  hiddenElements.forEach((el) => observer.observe(el));
-</script>
