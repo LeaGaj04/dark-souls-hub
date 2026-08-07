@@ -62,3 +62,8 @@ npm install
 
 # 4. Inicia el servidor de desarrollo
 npm run dev
+
+El sitio web estará disponible en http://localhost:4321.
+```
+
+Si este código te resultó útil o te gustó el diseño, ¡considera darle una ⭐️ al repositorio! Praise the Sun! ☀️
