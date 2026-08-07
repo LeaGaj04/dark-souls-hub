@@ -1,0 +1,208 @@
+---
+// Lógica de servidor
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jefes Legendarios | Dark Souls Hub</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="back-btn">⬅ Volver al Portal</a>
+    </header>
+
+    <main class="content-section">
+      <h1 class="page-title">Jefes Legendarios</h1>
+      <p class="page-subtitle">Aquellos que custodian las Almas de Señor y desafían a los no muertos elegidos.</p>
+
+      <div class="boss-grid">
+        
+        <article class="boss-card">
+          <div class="image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" 
+              alt="Gwyn Señor de la Ceniza" 
+              class="boss-image" 
+            />
+            <span class="location-badge">Horno de la Llama Original</span>
+          </div>
+          <div class="boss-info">
+            <h2 class="boss-name">Gwyn, Señor de la Ceniza</h2>
+            <p class="boss-lore">El antiguo Señor del Sol que se entregó a sí mismo a la Primera Llama para prolongar la Era del Fuego, convirtiéndose en una cáscara consumida por la ceniza.</p>
+          </div>
+        </article>
+
+        <article class="boss-card">
+          <div class="image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" 
+              alt="Artorias del Abismo" 
+              class="boss-image" 
+            />
+            <span class="location-badge">Municipio de Oolacile</span>
+          </div>
+          <div class="boss-info">
+            <h2 class="boss-name">Artorias el Caminante del Abismo</h2>
+            <p class="boss-lore">Uno de los cuatro caballeros de Gwyn. Viajó a Oolacile para detener la propagación de la Oscuridad, pero fue consumido trágicamente por el Abismo.</p>
+          </div>
+        </article>
+
+        <article class="boss-card">
+          <div class="image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80" 
+              alt="Ornstein y Smough" 
+              class="boss-image" 
+            />
+            <span class="location-badge">Catedral de Anor Londo</span>
+          </div>
+          <div class="boss-info">
+            <h2 class="boss-name">Ornstein y Smough</h2>
+            <p class="boss-lore">Los legendarios guardianes de la ilusión de Gwynevere en Anor Londo. El Asesino de Dragones y el Ejecutor forman una prueba implacable.</p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --color-bg-dark: rgb(15, 15, 18);
+    --color-sun-gold: #FDB813;
+    --color-text-light: hsl(0, 0%, 85%);
+    --color-sun-glow: rgba(253, 184, 19, 0.4); 
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* --- HEADER Y NAVEGACIÓN --- */
+  .header {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .back-btn {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    color: var(--color-sun-gold);
+    text-shadow: 0 0 10px var(--color-sun-glow);
+  }
+
+  /* --- ESTRUCTURA PRINCIPAL --- */
+  .content-section {
+    padding: 0 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page-title {
+    color: var(--color-sun-gold);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(253, 184, 19, 0.3);
+    padding-bottom: 20px;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 70%);
+    margin-bottom: 50px;
+  }
+
+  /* --- CUADRÍCULA DE JEFES (CSS GRID) --- */
+  .boss-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+  }
+
+  /* --- ESTILOS DE LA TARJETA --- */
+  .boss-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(253, 184, 19, 0.15);
+    border-radius: 12px;
+    overflow: hidden; /* Corta la imagen para que respete las esquinas redondeadas */
+    transition: all 0.4s ease;
+  }
+
+  .boss-card:hover {
+    border-color: var(--color-sun-gold);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+  }
+
+  /* --- CONTENEDOR DE IMAGEN Y BADGE --- */
+  .image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .boss-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    transition: transform 0.5s ease;
+  }
+
+  /* EFECTO ZOOM EN LA IMAGEN AL PASAR EL MOUSE */
+  .boss-card:hover .boss-image {
+    transform: scale(1.08);
+  }
+
+  .location-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: rgba(15, 15, 18, 0.85);
+    color: var(--color-sun-gold);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(253, 184, 19, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px); /* Efecto cristal esmerilado detrás del texto */
+  }
+
+  /* --- INFORMACIÓN DEL JEFE --- */
+  .boss-info {
+    padding: 25px;
+  }
+
+  .boss-name {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .boss-lore {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: hsl(0, 0%, 75%);
+    margin: 0;
+  }
+</style>
