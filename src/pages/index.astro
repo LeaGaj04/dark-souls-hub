@@ -40,12 +40,6 @@
           <h3 class="card-title">Guerreros del Sol</h3>
           <p class="card-text">Homenaje a Solaire de Astora y sus milagros.</p>
         </a>
-
-        <a href="https://github.com/tu-usuario/solaire-astora-web" target="_blank" rel="noopener noreferrer" class="portal-card process-card">
-          <h3 class="card-title">🏗️ Ver el Proceso</h3>
-          <p class="card-text">Explora el código fuente, la arquitectura Astro y el viaje de debugging.</p>
-          <span class="star-icon">⭐ ¡Apoya con una Estrella!</span>
-        </a>
       </div>
     </section>
 
@@ -53,7 +47,7 @@
       <div class="footer-content">
         <h3 class="footer-title">Forja tu propio destino</h3>
         <div class="social-links">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+          <a href="https://github.com/LeaGaj04/dark-souls-hub" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
           <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
         </div>
       </div>
@@ -63,7 +57,6 @@
 </html>
 
 <style>
-  /* VARIABLES CSS (Sin cambios) */
   :root {
     --color-bg-dark: rgb(15, 15, 18);
     --color-sun-gold: #FDB813;
@@ -71,10 +64,8 @@
     --color-sun-glow: rgba(253, 184, 19, 0.4); 
   }
 
-  /* ESTILOS GLOBALES (Sin cambios) */
-  body { margin: 0; padding: 0; background-color: var(--color-bg-dark); color: var(--color-text-light); font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; scroll-behavior: smooth; /* Para que el botón CTA baje suavemente */ }
+  body { margin: 0; padding: 0; background-color: var(--color-bg-dark); color: var(--color-text-light); font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
   
-  /* ESTILOS HERO (Actualizados ligeramente para el nuevo texto) */
   .hero-section { position: relative; isolation: isolate; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; padding: 0 20px; overflow: hidden; }
   .bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
   .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 15, 18, 0.7); z-index: -1; }
@@ -84,7 +75,6 @@
   .cta-button { display: inline-block; padding: 15px 35px; background-color: transparent; color: var(--color-sun-gold); text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid var(--color-sun-gold); border-radius: 5px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; }
   .cta-button:hover { background-color: var(--color-sun-gold); color: var(--color-bg-dark); box-shadow: 0 0 20px var(--color-sun-glow); }
 
-  /* --- ESTILOS DE LA NUEVA SECCIÓN PORTAL (CSS Grid) --- */
   .portal-section {
     padding: 100px 20px;
     background-color: var(--color-bg-dark);
@@ -99,26 +89,23 @@
     margin-bottom: 50px;
   }
 
-  /* REUTILIZAMOS LA LÓGICA DE GRID QUE APRENDISTE */
   .grid-portal {
     display: grid;
-    /* Diseño adaptable automático */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  /* ESTILOS DE LAS CARTAS (Convertidas en enlaces <a>) */
   .portal-card {
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(253, 184, 19, 0.1);
     border-radius: 10px;
     padding: 40px 25px;
-    text-decoration: none; /* Quitamos subrayado */
-    color: inherit; /* Heredamos color de texto */
+    text-decoration: none; 
+    color: inherit; 
     transition: all 0.4s ease;
-    display: flex; /* Para alinear contenido internamente */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
   }
@@ -137,34 +124,13 @@
     margin: 0;
   }
 
-  /* EFECTO HOVER DE ELEVACIÓN EN 3D (Reforzado) */
   .portal-card:hover {
     background-color: rgba(253, 184, 19, 0.05);
     border-color: var(--color-sun-gold);
-    transform: translateY(-10px) scale(1.02); /* Sube y se agranda ligeramente */
+    transform: translateY(-10px) scale(1.02); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
   }
 
-  /* ESTILOS ESPECÍFICOS PARA LA CARTA DEL PROCESO */
-  .process-card {
-    background-color: rgba(253, 184, 19, 0.03); /* Un tono más dorado */
-    border: 2px dashed rgba(253, 184, 19, 0.3); /* Borde discontinuo para destacar */
-  }
-
-  .star-icon {
-    margin-top: 20px;
-    display: inline-block;
-    color: #ffffff;
-    font-weight: bold;
-    background-color: rgba(253, 184, 19, 0.8);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  /* --- ESTILOS DEL FOOTER (Sin cambios) --- */
   .footer-section { background-color: rgb(8, 8, 10); padding: 60px 20px; text-align: center; border-top: 1px solid var(--color-sun-glow); }
   .footer-title { color: var(--color-text-light); font-size: 1.5rem; margin-bottom: 2rem; letter-spacing: 1px; }
   .social-links { display: flex; justify-content: center; gap: 30px; }

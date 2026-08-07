@@ -1,0 +1,94 @@
+---
+// Lógica de servidor
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historia y Lore | Dark Souls Hub</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="back-btn">⬅ Volver al Portal</a>
+    </header>
+
+    <main class="content-section">
+      <h1 class="page-title">Lore & Historia</h1>
+      <p class="page-subtitle">"En la Edad de los Antiguos, el mundo era informe, envuelto en niebla..."</p>
+
+      <div class="lore-content">
+        <article class="lore-text">
+          <p>Antes de la llegada del fuego, el mundo estaba dominado por los Dragones Eternos. No había vida ni muerte, ni luz ni oscuridad. Todo cambió con el descubrimiento de la Primera Llama, la cual trajo consigo la disparidad.</p>
+          <p>De la oscuridad surgieron aquellos que encontraron las Almas de los Señores dentro de la llama: Gwyn el Señor de la Luz Solar, la Bruja de Izalith, Nito el Rey del Cementerio y el Furtivo Pigmeo, tan fácilmente olvidado.</p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --color-bg-dark: rgb(15, 15, 18);
+    --color-sun-gold: #FDB813;
+    --color-text-light: hsl(0, 0%, 85%);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* --- HEADER Y NAVEGACIÓN --- */
+  .header {
+    padding: 30px;
+  }
+
+  .back-btn {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    color: var(--color-sun-gold);
+    text-shadow: 0 0 10px rgba(253, 184, 19, 0.4);
+  }
+
+  /* --- CONTENIDO PRINCIPAL --- */
+  .content-section {
+    padding: 0 20px 100px;
+    max-width: 800px;
+    margin: 0 auto; /* Magia para centrar el contenido horizontalmente */
+  }
+
+  .page-title {
+    color: var(--color-sun-gold);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(253, 184, 19, 0.3);
+    padding-bottom: 20px;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: hsl(0, 0%, 60%);
+    margin-bottom: 40px;
+  }
+
+  .lore-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+</style>
