@@ -53,7 +53,7 @@ Si deseas explorar el código fuente en tu propia máquina, sigue estos pasos (r
 
 ```bash
 # 1. Clona el repositorio
-git clone [https://github.com/TU-USUARIO/dark-souls-hub.git](https://github.com/TU-USUARIO/dark-souls-hub.git)
+git clone [https://github.com/LeaGaj04/dark-souls-hub.git](https://github.com/LeaGaj04/dark-souls-hub.git)
 
 # 2. Entra a la carpeta del proyecto
 cd dark-souls-hub
