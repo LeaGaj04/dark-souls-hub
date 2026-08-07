@@ -1,0 +1,321 @@
+---
+// Lógica de servidor
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guerreros del Sol | Solaire de Astora</title>
+  </head>
+  <body>
+    <main class="hero-section">
+      <video class="bg-video" autoplay loop muted playsinline>
+        <source src="/hoguera.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+      
+      <div class="top-nav">
+        <a href="/" class="back-btn">⬅ Volver al Hub</a>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Solaire de Astora</h1>
+        <p class="hero-subtitle">"El sol es un astro maravilloso. ¡Ojalá yo pudiera ser tan incandescente!"</p>
+        <a href="#pacto" class="cta-button">Únete al Pacto</a>
+      </div>
+    </main>
+
+    <section id="pacto" class="pacto-section hidden-scroll">
+      <div class="pacto-content">
+        <h2 class="section-heading">Guerreros de la Luz Solar</h2>
+        <p class="section-text">
+          Aquellos que deseen invocar al sol y ayudar a otros mundos deben hincar la rodilla y realizar el juramento sagrado. La cooperación es la esencia de nuestra fe.
+        </p>
+      </div>
+    </section>
+
+    <section class="reliquias-section">
+      <h2 class="section-heading">Reliquias de Astora</h2>
+      <p class="section-text-sub">El equipo forjado en la luz para combatir el Abismo.</p>
+      
+      <div class="grid-container">
+        <article class="card">
+          <h3 class="card-title">Espada Recta de Luz Solar</h3>
+          <p class="card-text">Un arma ordinaria, pero imbuida con una fe inquebrantable y un diseño incandescente.</p>
+        </article>
+        
+        <article class="card">
+          <h3 class="card-title">Escudo de Luz Solar</h3>
+          <p class="card-text">Decorado con el símbolo sagrado, un faro de esperanza para los aliados en batalla.</p>
+        </article>
+        
+        <article class="card">
+          <h3 class="card-title">Talismán de Luz de Sol</h3>
+          <p class="card-text">Catalizador de milagros divinos, entregado solo a los guerreros más devotos del pacto.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="footer-content">
+        <h3 class="footer-title">Forja tu propio destino</h3>
+        <div class="social-links">
+          <a href="https://github.com/LeaGaj04/dark-souls-hub" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show-scroll');
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      const hiddenElements = document.querySelectorAll('.hidden-scroll');
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --color-bg-dark: rgb(15, 15, 18);
+    --color-sun-gold: #FDB813;
+    --color-text-light: hsl(0, 0%, 85%);
+    --color-sun-glow: rgba(253, 184, 19, 0.4); 
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero-section {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 18, 0.7);
+    z-index: -1;
+  }
+
+  .top-nav {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+  }
+
+  .back-btn {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    color: var(--color-sun-gold);
+    text-shadow: 0 0 10px var(--color-sun-glow);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    z-index: 1;
+  }
+
+  .hero-title {
+    color: var(--color-sun-gold);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px var(--color-sun-glow);
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--color-sun-gold);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid var(--color-sun-gold);
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--color-sun-gold);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 20px var(--color-sun-glow);
+  }
+
+  /* --- SECCIÓN DEL PACTO (ANIMACIÓN DE SCROLL) --- */
+  .pacto-section {
+    padding: 120px 20px;
+    background-color: var(--color-bg-dark);
+    text-align: center;
+  }
+
+  .pacto-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    color: var(--color-sun-gold);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .section-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: hsl(0, 0%, 75%);
+  }
+
+  .section-text-sub {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-text-light);
+  }
+
+  /* Clases para el Intersection Observer */
+  .hidden-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .show-scroll {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- SECCIÓN RELIQUIAS (CSS GRID) --- */
+  .reliquias-section {
+    padding: 100px 20px;
+    background-color: rgb(12, 12, 15);
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(253, 184, 19, 0.2);
+    border-radius: 8px;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+  }
+
+  .card-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    line-height: 1.6;
+    color: hsl(0, 0%, 75%);
+  }
+
+  .card:hover {
+    background-color: rgba(253, 184, 19, 0.1);
+    border-color: var(--color-sun-gold);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* --- FOOTER --- */
+  .footer-section {
+    background-color: rgb(8, 8, 10);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid var(--color-sun-glow);
+  }
+
+  .footer-title {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .social-link {
+    color: var(--color-sun-gold);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px var(--color-sun-gold);
+  }
+</style>
