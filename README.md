@@ -16,7 +16,7 @@ Este proyecto es una aplicación web Frontend moderna y de alto rendimiento cons
 ---
 
 <p align="center">
-  <<img alt="pagina principal dark soul" src="https://github.com/user-attachments/assets/1d6bd72b-0a38-483d-9c66-bc7cee4682af"
+  <img alt="pagina principal dark soul" src="https://github.com/user-attachments/assets/1d6bd72b-0a38-483d-9c66-bc7cee4682af"
  alt="Dark Souls Hub Web Preview" width="100%">
 </p>
 
