@@ -21,7 +21,10 @@
       <div class="video-overlay"></div>
 
       <div class="hero-content">
-        <h1 class="hero-title">EXPLORA LORDRAN</h1>
+        <h1 class="hero-title">
+          <span class="texto-blanco">EXPLORA</span><br />
+          LORDRAN
+        </h1>
         <p class="hero-subtitle">
           Una base de datos incandescente sobre el universo de Dark Souls:
           historia, jefes y el lore de los caídos.
@@ -434,68 +437,75 @@
     text-shadow: 0 0 15px var(--color-sun-gold);
   }
   .dlc-section {
-  margin-top: 100px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 50px;
-}
+    margin-top: 100px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 50px;
+  }
 
-.dlc-header {
-  margin-bottom: 40px;
-}
+  .dlc-header {
+    margin-bottom: 40px;
+  }
 
-.dlc-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
+  .dlc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
 
-/* LA MAGIA DEL ESTADO "MUERTO/BLOQUEADO" */
-.dlc-card.locked {
-  position: relative;
-  background: var(--color-bg-dark-alt);
-  border: 1px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
-  
-  /* Esto vuelve todo blanco y negro y reduce su visibilidad */
-  filter: grayscale(100%) brightness(0.6);
-  opacity: 0.7;
-  transition: all 0.4s ease;
-  cursor: not-allowed;
-}
+  /* LA MAGIA DEL ESTADO "MUERTO/BLOQUEADO" */
+  .dlc-card.locked {
+    position: relative;
+    background: var(--color-bg-dark-alt);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
 
-/* Efecto al pasar el mouse: recupera un poco de luz pero sigue muerto */
-.dlc-card.locked:hover {
-  filter: grayscale(100%) brightness(0.9);
-  opacity: 1;
-}
+    /* Esto vuelve todo blanco y negro y reduce su visibilidad */
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    cursor: not-allowed;
+  }
 
-.dlc-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #333;
-}
+  /* Efecto al pasar el mouse: recupera un poco de luz pero sigue muerto */
+  .dlc-card.locked:hover {
+    filter: grayscale(100%) brightness(0.9);
+    opacity: 1;
+  }
 
-.dlc-info {
-  padding: 20px;
-  text-align: left;
-}
+  .dlc-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+  }
 
-.dlc-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
+  .dlc-info {
+    padding: 20px;
+    text-align: left;
+  }
 
-.lock-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  z-index: 10;
-  opacity: 0.8;
-  text-shadow: 0 0 15px black;
-}
+  .dlc-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .lock-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    z-index: 10;
+    opacity: 0.8;
+    text-shadow: 0 0 15px black;
+  }
+  .texto-blanco {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    font-family: var(
+      --font-titles
+    ); 
+  }
 </style>
