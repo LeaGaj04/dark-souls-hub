@@ -97,18 +97,61 @@
 
     <section class="container map-section">
       <div class="map-header">
-        <h2 class="section-title">El Mapa de Lordran</h2>
+        <h2 class="section-title">El Mapa y Ficha de Lordran</h2>
         <p class="section-subtitle">
-          Descubre los caminos interconectados de un mundo en decadencia.
+          Descubre los caminos interconectados y los datos fundamentales del
+          reino.
         </p>
       </div>
 
-      <div class="map-image-container">
-        <img
-          src="/images/Mapa_Lordran.webp"
-          alt="Mapa del mundo de Dark Souls"
-          class="map-image"
-        />
+      <div class="map-content-grid">
+        <div class="map-image-container">
+          <img
+            src="/images/Mapa_Lordran.webp"
+            alt="Mapa del mundo de Dark Souls"
+            class="map-image"
+          />
+        </div>
+
+        <div class="map-info-table-container">
+          <table class="ds-info-table">
+            <thead>
+              <tr>
+                <th colspan="2">Ficha Técnica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-label">Título:</td>
+                <td class="table-value">Dark Souls: Remastered</td>
+              </tr>
+              <tr>
+                <td class="table-label">Desarrollador:</td>
+                <td class="table-value">FromSoftware</td>
+              </tr>
+              <tr>
+                <td class="table-label">Director:</td>
+                <td class="table-value">Hidetaka Miyazaki</td>
+              </tr>
+              <tr>
+                <td class="table-label">Género:</td>
+                <td class="table-value">ARPG / Fantasía Oscura</td>
+              </tr>
+              <tr>
+                <td class="table-label">Ubicación:</td>
+                <td class="table-value">Reino de Lordran</td>
+              </tr>
+              <tr>
+                <td class="table-label">Plataformas:</td>
+                <td class="table-value">PC, PS4, Xbox One, Switch</td>
+              </tr>
+              <tr>
+                <td class="table-label">Lanzamiento:</td>
+                <td class="table-value">2011 / 2018 (Remastered)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -523,11 +566,10 @@
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     font-family: var(--font-titles);
   }
-  /* ESTILOS DE LA SECCIÓN DEL MAPA */
+  /* SECCIÓN MAPA Y TABLA */
   .map-section {
     margin-top: 100px;
     text-align: center;
-    /* Un separador sutil arriba para distinguirlo de la sección anterior */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 50px;
   }
@@ -536,28 +578,86 @@
     margin-bottom: 40px;
   }
 
+  /* Contenedor de 2 columnas */
+  .map-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dividido en 2 columnas iguales */
+    gap: 30px;
+    align-items: center; /* Alinea verticalmente el mapa y la tabla */
+  }
+
+  /* LADO IZQUIERDO: Mapa en tamaño reducido */
   .map-image-container {
     max-width: 100%;
-    /* Un marco elegante tipo pergamino oscuro */
-    border: 1px solid rgba(255, 215, 0, 0.2); /* Borde ligeramente dorado/opaco */
+    border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   }
 
   .map-image {
     width: 100%;
     height: auto;
     display: block;
-    /* Efecto lúgubre por defecto */
-    filter: sepia(20%) brightness(0.7) contrast(1.1);
-    transition: all 0.5s ease;
-    cursor: crosshair; /* Cambia el cursor para invitar a "explorar" el mapa */
+    filter: sepia(20%) brightness(0.75) contrast(1.1);
+    transition: all 0.4s ease;
+    cursor: crosshair;
   }
 
-  /* El mapa se ilumina cuando el jugador (usuario) pasa el mouse */
   .map-image:hover {
     filter: sepia(0%) brightness(1) contrast(1);
-    transform: scale(1.02); /* Pequeño zoom inmersivo */
+    transform: scale(1.02);
+  }
+
+  /* LADO DERECHO: Tabla estilizada */
+  .map-info-table-container {
+    background: rgba(15, 15, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .ds-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .ds-info-table th {
+    font-family: var(--font-titles);
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .ds-info-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+  }
+
+  .ds-info-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .table-label {
+    font-weight: bold;
+    color: #c0c0c0;
+    width: 40%;
+  }
+
+  .table-value {
+    color: #e0e0e0;
+  }
+
+  /* Responsividad: En celulares pasa a 1 sola columna vertical */
+  @media (max-width: 768px) {
+    .map-content-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
