@@ -14,7 +14,47 @@
       rel="stylesheet"
     />
   </head>
+
+  <header class="topbar">
+    <div class="logo">
+      <a href="#">☀️ Dark Souls</a>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero">INICIO</a>
+      <a href="#reliquias">RELIQUIAS</a>
+      <a href="#mapa">MEMORIAS</a>
+      <a href="#dlc">PACTOS</a>
+    </nav>
+  </header><header class="topbar">
+    <div class="logo">
+      <a href="#">☀️ LORDRAN</a>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero">INICIO</a>
+      <a href="#reliquias">RELIQUIAS</a>
+      <a href="#mapa">MEMORIAS</a>
+      <a href="#dlc">PACTOS</a>
+    </nav>
+  </header>
+
   <body>
+    <aside class="side-indicator">
+      <ul class="indicator-list">
+        <li class="indicator-item active">
+          <a href="#hero" aria-label="Ir a Inicio"></a>
+        </li>
+        <li class="indicator-item">
+          <a href="#reliquias" aria-label="Ir a Reliquias"></a>
+        </li>
+        <li class="indicator-item">
+          <a href="#mapa" aria-label="Ir al Mapa"></a>
+        </li>
+        <li class="indicator-item">
+          <a href="#dlc" aria-label="Ir a Expansiones"></a>
+        </li>
+      </ul>
+    </aside>
+
     <main class="hero-section">
       <img src="/44.jpg" alt="fondo" class="bg-image" />
 
@@ -223,451 +263,558 @@
       </div>
     </footer>
   </body>
-</html>
 
-<style>
-  /* VARIABLES CSS (Sin cambios, manteniendo el negro puro) */
-  :root {
-    --color-bg-dark: rgb(0, 0, 0); /* Negro Puro ahora */
-    --color-bg-dark-alt: rgb(15, 15, 18); /* Un gris muy oscuro para tarjetas */
-    --color-sun-gold: #fdb813;
-    --color-text-light: hsl(0, 0%, 85%);
-    --color-sun-glow: rgba(253, 184, 19, 0.4);
-    --font-titles: "Cinzel", serif;
-    --font-text: "Inter", sans-serif;
-  }
-
-  h1,
-  h2,
-  h3,
-  .section-title {
-    font-family: var(--font-titles);
-    text-transform: uppercase;
-    color: #ffffff; /* Blanco puro como en tus capturas */
-  }
-
-  p,
-  a,
-  span {
-    font-family: var(--font-text);
-  }
-
-  /* ESTILOS GLOBALES */
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
-    font-family:
-      system-ui,
-      -apple-system,
-      sans-serif;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  /* --- 1. ESTILOS HERO (ACTUALIZADOS CON FOTO Y DEGRADADO) --- */
-  .hero-section {
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-  }
-  .bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-  }
-
-  /* Degradado para fundir la foto a negro */
-  .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Degradado lineal de transparente arriba a negro puro abajo */
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.4) 60%,
-      var(--color-bg-dark) 100%
-    );
-    z-index: -1;
-  }
-
-  .hero-content {
-    max-width: 800px;
-    z-index: 1;
-  }
-  .hero-title {
-    color: var(--color-sun-gold);
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 15px var(--color-sun-glow);
-  }
-  .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-  }
-  .cta-button {
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: transparent;
-    color: var(--color-sun-gold);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 2px solid var(--color-sun-gold);
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-  .cta-button:hover {
-    background-color: var(--color-sun-gold);
-    color: var(--color-bg-dark);
-    box-shadow: 0 0 20px var(--color-sun-glow);
-  }
-
-  /* TÍTULOS GENERALES DE SECCIÓN */
-  .portal-heading {
-    color: #ffffff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-    text-align: center;
-    border-bottom: 1px solid rgba(253, 184, 19, 0.2);
-    padding-bottom: 20px;
-  }
-
-  /* --- 2. NUEVA SECCIÓN: ORÍGENES (SOBRE EL FONDO NEGRO) --- */
-  .origenes-section {
-    padding: 100px 0;
-    background-color: var(--color-bg-dark);
-  }
-  .creator-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  .creator-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(253, 184, 19, 0.1);
-    border-radius: 10px;
-    padding: 30px 20px;
-    transition: all 0.4s ease;
-    border-left: 3px solid transparent;
-  }
-  .creator-card:hover {
-    border-left-color: var(--color-sun-gold);
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  .creator-name {
-    color: var(--color-sun-gold);
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  .creator-text {
-    line-height: 1.6;
-    color: hsl(0, 0%, 75%);
-    font-size: 0.95rem;
-  }
-
-  /* --- 3. NUEVA SECCIÓN: CAPTURAS DEL JUEGO --- */
-  .memorias-section {
-    padding: 100px 0;
-    background-color: var(--color-bg-dark);
-    text-align: center;
-  }
-  .section-subtitle-small {
-    color: hsl(0, 0%, 60%);
-    font-style: italic;
-    margin-bottom: 40px;
-    margin-top: -30px;
-    font-size: 1rem;
-  }
-  .memorias-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .memoria-pic {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-  }
-  .memoria-pic:hover {
-    border-color: var(--color-sun-gold);
-    box-shadow: 0 0 15px var(--color-sun-glow);
-    transform: scale(1.03);
-  }
-
-  /* --- 4. TU PORTAL DE NAVEGACIÓN (MANTENIDO Y REFINADO) --- */
-  .portal-section {
-    padding: 100px 0;
-    background-color: var(--color-bg-dark);
-    text-align: center;
-  }
-  .grid-portal {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-  .portal-card {
-    background-color: var(--color-bg-dark-alt);
-    border: 1px solid rgba(253, 184, 19, 0.1);
-    border-radius: 10px;
-    padding: 40px 25px;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .card-title {
-    color: var(--color-sun-gold);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-  }
-  .card-text {
-    line-height: 1.6;
-    color: hsl(0, 0%, 75%);
-    font-size: 1rem;
-    margin: 0;
-  }
-  .portal-card:hover {
-    border-color: var(--color-sun-gold);
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-  }
-
-  /* --- FOOTER (Sin cambios) --- */
-  .footer-section {
-    background-color: rgb(8, 8, 10);
-    padding: 60px 20px;
-    text-align: center;
-    border-top: 1px solid var(--color-sun-glow);
-  }
-  .footer-title {
-    color: var(--color-text-light);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  .social-link {
-    color: var(--color-sun-gold);
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-  .social-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 15px var(--color-sun-gold);
-  }
-  .dlc-section {
-    margin-top: 100px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 50px;
-  }
-
-  .dlc-header {
-    margin-bottom: 40px;
-  }
-
-  .dlc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-
-  /* LA MAGIA DEL ESTADO "MUERTO/BLOQUEADO" */
-  .dlc-card.locked {
-    position: relative;
-    background: var(--color-bg-dark-alt);
-    border: 1px solid #333;
-    border-radius: 8px;
-    overflow: hidden;
-
-    /* Esto vuelve todo blanco y negro y reduce su visibilidad */
-    filter: grayscale(100%) brightness(0.6);
-    opacity: 0.7;
-    transition: all 0.4s ease;
-    cursor: not-allowed;
-  }
-
-  /* Efecto al pasar el mouse: recupera un poco de luz pero sigue muerto */
-  .dlc-card.locked:hover {
-    filter: grayscale(100%) brightness(0.9);
-    opacity: 1;
-  }
-
-  .dlc-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 1px solid #333;
-  }
-
-  .dlc-info {
-    padding: 20px;
-    text-align: left;
-  }
-
-  .dlc-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-
-  .lock-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    z-index: 10;
-    opacity: 0.8;
-    text-shadow: 0 0 15px black;
-  }
-  .texto-blanco {
-    color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-    font-family: var(--font-titles);
-  }
-  /* SECCIÓN MAPA Y TABLA */
-  .map-section {
-    margin-top: 100px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 50px;
-  }
-
-  .map-header {
-    margin-bottom: 40px;
-  }
-
-  /* Contenedor de 2 columnas */
-  .map-content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dividido en 2 columnas iguales */
-    gap: 30px;
-    align-items: center; /* Alinea verticalmente el mapa y la tabla */
-  }
-
-  /* LADO IZQUIERDO: Mapa en tamaño reducido */
-  .map-image-container {
-    max-width: 100%;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  }
-
-  .map-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: sepia(20%) brightness(0.75) contrast(1.1);
-    transition: all 0.4s ease;
-    cursor: crosshair;
-  }
-
-  .map-image:hover {
-    filter: sepia(0%) brightness(1) contrast(1);
-    transform: scale(1.02);
-  }
-
-  /* LADO DERECHO: Tabla estilizada */
-  .map-info-table-container {
-    background: rgba(15, 15, 18, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  }
-
-  .ds-info-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-  }
-
-  .ds-info-table th {
-    font-family: var(--font-titles);
-    color: #ffffff;
-    font-size: 1.2rem;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .ds-info-table td {
-    padding: 12px 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.95rem;
-  }
-
-  .ds-info-table tr:last-child td {
-    border-bottom: none;
-  }
-
-  .table-label {
-    font-weight: bold;
-    color: #c0c0c0;
-    width: 40%;
-  }
-
-  .table-value {
-    color: #e0e0e0;
-  }
-
-  /* Responsividad: En celulares pasa a 1 sola columna vertical */
-  @media (max-width: 768px) {
-    .map-content-grid {
-      grid-template-columns: 1fr;
+  <style>
+    /* VARIABLES CSS (Sin cambios, manteniendo el negro puro) */
+    :root {
+      --color-bg-dark: rgb(0, 0, 0); /* Negro Puro ahora */
+      --color-bg-dark-alt: rgb(
+        15,
+        15,
+        18
+      ); /* Un gris muy oscuro para tarjetas */
+      --color-sun-gold: #fdb813;
+      --color-text-light: hsl(0, 0%, 85%);
+      --color-sun-glow: rgba(253, 184, 19, 0.4);
+      --font-titles: "Cinzel", serif;
+      --font-text: "Inter", sans-serif;
     }
-  }
-  .table-value {
-  color: #ffda6a; /* Color dorado incandescente para los números y datos */
-  font-weight: 500;
-}
 
-.table-label {
-  font-weight: 600;
-  color: #d0d0d0;
-  width: 45%;
-}
-</style>
+    h1,
+    h2,
+    h3,
+    .section-title {
+      font-family: var(--font-titles);
+      text-transform: uppercase;
+      color: #ffffff; /* Blanco puro como en tus capturas */
+    }
+
+    p,
+    a,
+    span {
+      font-family: var(--font-text);
+    }
+
+    /* ESTILOS GLOBALES */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+      font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --- 1. ESTILOS HERO (ACTUALIZADOS CON FOTO Y DEGRADADO) --- */
+    .hero-section {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+      overflow: hidden;
+    }
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Degradado para fundir la foto a negro */
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Degradado lineal de transparente arriba a negro puro abajo */
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4) 60%,
+        var(--color-bg-dark) 100%
+      );
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 1;
+    }
+    .hero-title {
+      color: var(--color-sun-gold);
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px var(--color-sun-glow);
+    }
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 15px 35px;
+      background-color: transparent;
+      color: var(--color-sun-gold);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: 2px solid var(--color-sun-gold);
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: var(--color-sun-gold);
+      color: var(--color-bg-dark);
+      box-shadow: 0 0 20px var(--color-sun-glow);
+    }
+
+    /* TÍTULOS GENERALES DE SECCIÓN */
+    .portal-heading {
+      color: #ffffff;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+      text-align: center;
+      border-bottom: 1px solid rgba(253, 184, 19, 0.2);
+      padding-bottom: 20px;
+    }
+
+    /* --- 2. NUEVA SECCIÓN: ORÍGENES (SOBRE EL FONDO NEGRO) --- */
+    .origenes-section {
+      padding: 100px 0;
+      background-color: var(--color-bg-dark);
+    }
+    .creator-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .creator-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(253, 184, 19, 0.1);
+      border-radius: 10px;
+      padding: 30px 20px;
+      transition: all 0.4s ease;
+      border-left: 3px solid transparent;
+    }
+    .creator-card:hover {
+      border-left-color: var(--color-sun-gold);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    .creator-name {
+      color: var(--color-sun-gold);
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .creator-text {
+      line-height: 1.6;
+      color: hsl(0, 0%, 75%);
+      font-size: 0.95rem;
+    }
+
+    /* --- 3. NUEVA SECCIÓN: CAPTURAS DEL JUEGO --- */
+    .memorias-section {
+      padding: 100px 0;
+      background-color: var(--color-bg-dark);
+      text-align: center;
+    }
+    .section-subtitle-small {
+      color: hsl(0, 0%, 60%);
+      font-style: italic;
+      margin-bottom: 40px;
+      margin-top: -30px;
+      font-size: 1rem;
+    }
+    .memorias-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .memoria-pic {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .memoria-pic:hover {
+      border-color: var(--color-sun-gold);
+      box-shadow: 0 0 15px var(--color-sun-glow);
+      transform: scale(1.03);
+    }
+
+    /* --- 4. TU PORTAL DE NAVEGACIÓN (MANTENIDO Y REFINADO) --- */
+    .portal-section {
+      padding: 100px 0;
+      background-color: var(--color-bg-dark);
+      text-align: center;
+    }
+    .grid-portal {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .portal-card {
+      background-color: var(--color-bg-dark-alt);
+      border: 1px solid rgba(253, 184, 19, 0.1);
+      border-radius: 10px;
+      padding: 40px 25px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-title {
+      color: var(--color-sun-gold);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    .card-text {
+      line-height: 1.6;
+      color: hsl(0, 0%, 75%);
+      font-size: 1rem;
+      margin: 0;
+    }
+    .portal-card:hover {
+      border-color: var(--color-sun-gold);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* --- FOOTER (Sin cambios) --- */
+    .footer-section {
+      background-color: rgb(8, 8, 10);
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 1px solid var(--color-sun-glow);
+    }
+    .footer-title {
+      color: var(--color-text-light);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .social-link {
+      color: var(--color-sun-gold);
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+    }
+    .social-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 15px var(--color-sun-gold);
+    }
+    .dlc-section {
+      margin-top: 100px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 50px;
+    }
+
+    .dlc-header {
+      margin-bottom: 40px;
+    }
+
+    .dlc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    /* LA MAGIA DEL ESTADO "MUERTO/BLOQUEADO" */
+    .dlc-card.locked {
+      position: relative;
+      background: var(--color-bg-dark-alt);
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+
+      /* Esto vuelve todo blanco y negro y reduce su visibilidad */
+      filter: grayscale(100%) brightness(0.6);
+      opacity: 0.7;
+      transition: all 0.4s ease;
+      cursor: not-allowed;
+    }
+
+    /* Efecto al pasar el mouse: recupera un poco de luz pero sigue muerto */
+    .dlc-card.locked:hover {
+      filter: grayscale(100%) brightness(0.9);
+      opacity: 1;
+    }
+
+    .dlc-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #333;
+    }
+
+    .dlc-info {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .dlc-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .lock-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      z-index: 10;
+      opacity: 0.8;
+      text-shadow: 0 0 15px black;
+    }
+    .texto-blanco {
+      color: #ffffff;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      font-family: var(--font-titles);
+    }
+    /* SECCIÓN MAPA Y TABLA */
+    .map-section {
+      margin-top: 100px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 50px;
+    }
+
+    .map-header {
+      margin-bottom: 40px;
+    }
+
+    /* Contenedor de 2 columnas */
+    .map-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Dividido en 2 columnas iguales */
+      gap: 30px;
+      align-items: center; /* Alinea verticalmente el mapa y la tabla */
+    }
+
+    /* LADO IZQUIERDO: Mapa en tamaño reducido */
+    .map-image-container {
+      max-width: 100%;
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .map-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: sepia(20%) brightness(0.75) contrast(1.1);
+      transition: all 0.4s ease;
+      cursor: crosshair;
+    }
+
+    .map-image:hover {
+      filter: sepia(0%) brightness(1) contrast(1);
+      transform: scale(1.02);
+    }
+
+    /* LADO DERECHO: Tabla estilizada */
+    .map-info-table-container {
+      background: rgba(15, 15, 18, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .ds-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .ds-info-table th {
+      font-family: var(--font-titles);
+      color: #ffffff;
+      font-size: 1.2rem;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ds-info-table td {
+      padding: 12px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+    }
+
+    .ds-info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-label {
+      font-weight: bold;
+      color: #c0c0c0;
+      width: 40%;
+    }
+
+    .table-value {
+      color: #e0e0e0;
+    }
+
+    /* Responsividad: En celulares pasa a 1 sola columna vertical */
+    @media (max-width: 768px) {
+      .map-content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .table-value {
+      color: #ffda6a; /* Color dorado incandescente para los números y datos */
+      font-weight: 500;
+    }
+
+    .table-label {
+      font-weight: 600;
+      color: #d0d0d0;
+      width: 45%;
+    }
+    /* SIDEBAR INDICATOR */
+    .side-indicator {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%); /* Lo centra perfectamente en vertical */
+      z-index: 100; /* Asegura que esté por encima de todo */
+    }
+
+    .indicator-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Separación entre las líneas */
+      padding: 0;
+      margin: 0;
+    }
+
+    .indicator-item a {
+      display: block;
+      width: 3px;
+      height: 25px;
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.2
+      ); /* Líneas apagadas por defecto */
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    /* Estado Activo y Hover (La línea dorada de la imagen) */
+    .indicator-item.active a,
+    .indicator-item a:hover {
+      background-color: #ffda6a; /* El dorado de Lordran */
+      height: 45px; /* Se hace más larga cuando está activa */
+      box-shadow: 0 0 10px rgba(255, 218, 106, 0.6); /* Ligero resplandor */
+    }
+
+    /* Ocultarlo en móviles para que no estorbe la lectura */
+    @media (max-width: 768px) {
+      .side-indicator {
+        display: none;
+      }
+    }
+    /* TOPBAR FIX (Barra Superior Fija y Siempre Visible) */
+    .topbar {
+      position: fixed; /* O usa 'absolute' si solo quieres que se vea al inicio arriba */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+
+      /* CLAVE 1: z-index alto para estar encima de imágenes, videos y fondos */
+      z-index: 1000;
+
+      /* Alineación y Espaciado */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+      box-sizing: border-box;
+
+      /* CLAVE 2: Fondo semitransparente oscuro con efecto de vidrio (Glassmorphism) */
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(8px); /* Difumina el fondo al hacer scroll */
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15); /* Sutil borde dorado */
+    }
+
+    /* Estilos de los enlaces e íconos del Topbar */
+    .logo a {
+      font-family: var(--font-titles);
+      color: #ffda6a;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-titles);
+      color: #d0d0d0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffda6a; /* Resplandor dorado al pasar el cursor */
+    }
+
+    /* Si tu contenido Hero queda tapado por la altura del topbar, agrega padding-top al hero */
+    .hero-section {
+      padding-top: 80px;
+    }
+  </style>
+
+</html>
