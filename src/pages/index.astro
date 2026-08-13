@@ -28,6 +28,9 @@
   </header>
 
   <body>
+    <div class="ornamental-divider top-divider">
+      <span class="diamond">El Camino del no Muerto</span>
+    </div>
     <aside class="side-indicator">
       <ul class="indicator-list">
         <li class="indicator-item active">
@@ -805,6 +808,63 @@
     .hero-section {
       padding-top: 80px;
     }
+    /* CONTENEDOR DEL SEPARADOR */
+    .ornamental-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+      width: 100%;
+    }
+
+    .top-divider {
+      position: absolute !important; /* Lo saca del flujo normal (ya no empuja nada) */
+      top: 100px !important; /* Lo pega exactamente a la altura donde termina tu Topbar */
+      left: 0;
+      width: 100%;
+      margin-top: 0 !important; /* Matamos el margen que estaba creando el hueco negro */
+      z-index: 50; /* Asegura que flote sobre la imagen pero debajo del menú */
+    }
+
+    /* LÍNEAS LATERALES QUE SE DESVANECEN */
+    .ornamental-divider::before,
+    .ornamental-divider::after {
+      content: "";
+      height: 1px; /* Grosor de la línea */
+      flex-grow: 1;
+      max-width: 250px; /* Largo máximo de la línea hacia cada lado */
+    }
+
+    /* Línea Izquierda (se desvanece hacia la izquierda) */
+    .ornamental-divider::before {
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 218, 106, 0.6)
+      );
+      margin-right: 15px; /* Separación con el rombo */
+    }
+
+    /* Línea Derecha (se desvanece hacia la derecha) */
+    .ornamental-divider::after {
+      background: linear-gradient(
+        to left,
+        transparent,
+        rgba(255, 218, 106, 0.6)
+      );
+      margin-left: 15px; /* Separación con el rombo */
+    }
+
+    /* ROMBO CENTRAL DORADO */
+    .diamond {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: #ffda6a; /* El dorado de Lordran */
+      transform: rotate(45deg); /* Convierte el cuadrado en rombo */
+      box-shadow: 0 0 10px rgba(255, 218, 106, 0.8); /* Resplandor incandescente */
+    }
   </style>
+
 
 </html>
