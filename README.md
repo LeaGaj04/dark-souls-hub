@@ -7,6 +7,13 @@
 
 # Dark Souls Hub | Lordran Database
 
+<p align="center">
+  <img src="./docs/screenshots/preview-lordran.png" alt="Previsualización de la Landing Page Lordran Hub" width="800px" style="border-radius: 10px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+</p>
+<p align="center">
+  <em>Estado actual del diseño y desarrollo de la interfaz de Lordran Hub.</em>
+</p>
+
 > *"Solo en la oscuridad pueden brillar verdaderamente las almas."*
 
 Este proyecto es una aplicación web Frontend moderna y de alto rendimiento construida con **Astro**. Funciona como una base de datos interactiva e inmersiva sobre el universo del videojuego *Dark Souls*, abarcando su historia, sus jefes legendarios y sus personajes más icónicos.
