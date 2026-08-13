@@ -315,7 +315,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 90vh; /* Ocupa el 85% de la pantalla (más pequeña) */
+      box-sizing: border-box; /* Obliga a que el padding no sume altura extra */
       text-align: center;
       padding: 0 20px;
       overflow: hidden;
@@ -820,7 +821,7 @@
 
     .top-divider {
       position: absolute !important; /* Lo saca del flujo normal (ya no empuja nada) */
-      top: 100px !important; /* Lo pega exactamente a la altura donde termina tu Topbar */
+      top: 90px !important; /* Lo pega exactamente a la altura donde termina tu Topbar */
       left: 0;
       width: 100%;
       margin-top: 0 !important; /* Matamos el margen que estaba creando el hueco negro */
