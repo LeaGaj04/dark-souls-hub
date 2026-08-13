@@ -48,7 +48,7 @@ Este proyecto fue desarrollado bajo una arquitectura moderna enfocada en el rend
 ---
 
 <p align="center">
-  <img src="./docs/screenshots/page-darksoul.png" alt="Previsualización de la Landing Page Lordran Hub" width="800px" style="border-radius: 10px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+  <img src="./docs/screenshots/page-darksoul.PNG" alt="Previsualización de la Landing Page Lordran Hub" width="800px" style="border-radius: 10px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
 </p>
 <p align="center">
   <em>Estado actual del diseño y desarrollo de la interfaz de Lordran Hub.</em>
